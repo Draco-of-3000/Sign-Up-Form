@@ -3,6 +3,7 @@ body {
     margin: 0;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 .image-sidebar {
@@ -24,7 +25,7 @@ body {
 .logo {
     width: 100%;
     position: absolute; /* Use absolute positioning */
-    top: 25%;
+    top: 24.7%;
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
@@ -39,4 +40,64 @@ body {
     width: 50px;
     height: 50px;
     margin-right: 10px;
+}
+
+.intro-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Add space between intro-text and form-container */
+    padding: 40px;
+    height: 27.7vh;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.form-container {
+    width: 100%; /* Ensure it takes full width */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+form > p {
+    padding-left: 40px;
+}
+
+.columns-container {
+    display: flex;
+    gap: 20px; /* Add space between left and right columns */
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 25vh;
+}
+
+.left-column,
+.right-column {
+    flex: 1; /* Each column takes equal space */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add space between form inputs */
+}
+
+.btn-container {
+    padding-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 29vh;
 }
