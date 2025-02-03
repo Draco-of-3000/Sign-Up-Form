@@ -6,6 +6,14 @@ body {
     overflow: hidden;
 }
 
+@font-face {
+    font-family: 'norsebold';
+    src: url(Fonts/norse-bold-webfont.woff2) format('woff2'),
+         url(Fonts/norse-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .image-sidebar {
     position: relative;
     width: 40%;
@@ -25,28 +33,28 @@ body {
 .logo {
     width: 100%;
     position: absolute; /* Use absolute positioning */
-    top: 24.7%;
+    top: 18%;
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
     color: white; 
-    font-size: 24px;
-    font-family: Arial, sans-serif;
+    font:
+        6rem "norsebold",
+        monospace;
     background-color: rgba(0, 0, 0, 0.5); /* Add a background for better visibility */
     padding: 20px; /* Add padding */
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 10%;
+    height: 10%;
     margin-right: 10px;
 }
 
 .intro-text {
     background-color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px; /* Add space between intro-text and form-container */
     padding: 40px;
-    height: 27.7vh;
+    height: 36.57vh;
 }
 
 /* Main content area */
@@ -72,16 +80,31 @@ form p {
     text-align: left;
 }
 
-form > p {
+.columns-container {
+    gap: 20px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    padding-bottom: 40px;
     padding-left: 40px;
+    height: auto; /* Adjust height to fit content */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.columns-container {
+
+.p-row {
     display: flex;
-    gap: 20px; /* Add space between left and right columns */
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 25vh;
+    align-items: center; /* Center the p element vertically */
+}
+
+.p-row p {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.columns-wrapper {
+    display: flex;
+    gap: 10px; /* Add space between left and right columns */
 }
 
 .left-column,
@@ -89,7 +112,40 @@ form > p {
     flex: 1; /* Each column takes equal space */
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Add space between form inputs */
+    gap: 20px; /* Add space between form inputs */
+}
+
+/* Target labels and inputs directly */
+.left-column > div,
+.right-column > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between label and input */
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    font-size: 1rem;
+    height: 30px;
+    width: 60%;
+}
+
+input:focus {
+    border: none;
+    border: 1px solid #007bff; /* Blue border */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Subtle blue glow */
+    outline: none;
+}
+
+input[type="password"]:invalid {
+    border: 1px solid red; /* Red border when invalid */
 }
 
 .btn-container {
@@ -98,6 +154,29 @@ form > p {
     padding-right: 40px;
     padding-bottom: 40px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 29vh;
+    height: auto;
 }
+
+button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.login {
+    color: #45a049;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
