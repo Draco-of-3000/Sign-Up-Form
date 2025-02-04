@@ -69,6 +69,25 @@ body {
     margin-right: 10px;
 }
 
+.img-footer {
+    position: absolute; /* Position the footer absolutely */
+    bottom: 20px; /* Position at the bottom of the container */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    color: white; /* Text color */
+    font-size: 0.9rem; /* Adjust font size */
+    text-align: center; /* Center the text */
+}
+
+.img-footer a {
+    color: white; /* Link color */
+    text-decoration: underline; /* Underline links */
+}
+
+.img-footer a:hover {
+    color: #ccc; /* Link hover color */
+}
+
 .intro-text {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
