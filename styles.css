@@ -72,8 +72,8 @@ body {
 .img-footer {
     position: absolute; /* Position the footer absolutely */
     bottom: 20px; /* Position at the bottom of the container */
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
     color: white; /* Text color */
     font-size: 0.9rem; /* Adjust font size */
     text-align: center; /* Center the text */
